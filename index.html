@@ -1,123 +1,181 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carmine D'Alise – Digital Lead | Portfolio</title>
-    <style>
-        :root {
-            --bg: #020617;
-            --card: #0f172a;
-            --primary: #38bdf8;
-            --secondary: #22c55e;
-            --text: #f1f5f9;
-            --muted: #94a3b8;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            background: var(--bg); 
-            color: var(--text); 
-            font-family: 'Inter', system-ui, sans-serif; 
-            line-height: 1.6; 
-        }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        
-        header { text-align: left; padding-bottom: 60px; border-bottom: 1px solid #1e293b; }
-        h1 { font-size: 3rem; color: #fff; margin-bottom: 10px; }
-        .tagline { font-size: 1.2rem; color: var(--primary); font-weight: 500; }
-        
-        .section-title { margin: 40px 0 20px; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { 
-            background: var(--card); 
-            padding: 25px; 
-            border-radius: 16px; 
-            border: 1px solid #1e293b; 
-            transition: transform 0.3s ease;
-        }
-        .card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .card h3 { margin-bottom: 10px; color: #fff; }
-        .card p { color: var(--muted); font-size: 0.95rem; }
-        
-        .badge { 
-            background: rgba(56, 189, 248, 0.1); 
-            color: var(--primary); 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 0.75rem; 
-            margin: 4px 4px 0 0; 
-            display: inline-block;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-        
-        .cta-container { margin-top: 50px; text-align: center; }
-        .btn { 
-            display: inline-block; 
-            background: linear-gradient(90deg, var(--primary), var(--secondary)); 
-            color: #020617; 
-            padding: 15px 35px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 700; 
-            transition: opacity 0.2s;
-        }
-        .btn:hover { opacity: 0.9; }
-        
-        footer { margin-top: 80px; text-align: center; color: var(--muted); font-size: 0.8rem; padding-bottom: 40px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmine D'Alise – Digital Lead | Full Stack Developer | Technical Project Manager</title>
+  <meta name="description" content="Portfolio professionale di Carmine D'Alise – Full Stack Developer, Digital Lead e Technical Project Manager con oltre 20 anni di esperienza internazionale." />
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #0f172a;
+      --primary: #38bdf8;
+      --secondary: #22c55e;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; }
+    header h2 { margin-top: 0.5rem; font-size: 1.4rem; color: var(--primary); font-weight: 500; }
+    header p { margin-top: 1.5rem; max-width: 800px; color: var(--muted); font-size: 1.1rem; }
+    
+    section { max-width: 1100px; margin: auto; padding: 3rem 2rem; }
+    h3 { margin-bottom: 1.5rem; color: var(--secondary); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 15px 40px rgba(56,189,248,0.1);
+    }
+    .card h4 { font-size: 1.25rem; margin-bottom: 1rem; color: #fff; }
+    .card p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; }
+    
+    .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .badge {
+      background: rgba(56,189,248,0.1);
+      color: var(--primary);
+      padding: 0.4rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid rgba(56,189,248,0.2);
+    }
+    
+    .list-check { list-style: none; }
+    .list-check li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px; }
+    .list-check li::before { content: "✔"; color: var(--secondary); font-weight: bold; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: #020617;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .cta:hover { transform: scale(1.05); }
+
+    footer {
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>carmine d'alise</h1>
-            <p class="tagline">Digital Lead · Full Stack Developer · Technical Project Manager</p>
-            <p style="margin-top: 20px; color: var(--muted); max-width: 700px;">
-                Oltre 20 anni di esperienza internazionale nella progettazione e gestione di ecosistemi digitali complessi. 
-                Esperto in soluzioni tecnologiche per ambienti **Land & Cruise**, trasformazione AI e sistemi AV/IT mission-critical.
-            </p>
-        </header>
 
-        <h2 class="section-title">Core Expertise</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Digital Transformation</h3>
-                <p>Leadership tecnica in progetti internazionali. Integrazione di AI Agents e automazione dei processi aziendali.</p>
-                <div style="margin-top:15px;">
-                    <span class="badge">AI Strategy</span> <span class="badge">Agile</span> <span class="badge">Scrum</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Full Stack Development</h3>
-                <p>Sviluppo di architetture scalabili, dal frontend UX ai sistemi backend e integrazioni API.</p>
-                <div style="margin-top:15px;">
-                    <span class="badge">React</span> <span class="badge">Node.js</span> <span class="badge">Python</span> <span class="badge">Django</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Cruise & Hospitality Tech</h3>
-                <p>Specializzato in Digital Signage (Crestron, MagicInfo), networking satellitare (Starlink) e sistemi IT di bordo.</p>
-                <div style="margin-top:15px;">
-                    <span class="badge">AV Systems</span> <span class="badge">IoT</span> <span class="badge">Sat-Com</span>
-                </div>
-            </div>
-        </div>
+<header>
+  <h1>carmine d'alise</h1>
+  <h2>digital lead · full stack developer · technical project manager</h2>
+  <p>
+    Versatile professional with over <strong>20+ years of international experience</strong> across digital, technical, AI-driven, and travel & tourism environments. Specialized in designing and delivering scalable solutions for <strong>land-based and cruise ship operations</strong>.
+  </p>
+  <a class="cta" href="https://github.com/iacreatorcar" target="_blank">View GitHub Profile</a>
+</header>
 
-        <h2 class="section-title">Value for Recruitment</h2>
-        <div class="card" style="width: 100%;">
-            <p>✔ Disponibilità immediata per <strong>contratti rotazionali e trasferte internazionali</strong>.</p>
-            <p>✔ Comprovata capacità di gestire team multiculturali in ambienti ad alta pressione.</p>
-            <p>✔ Ponte perfetto tra visione strategica (Management) ed esecuzione tecnica (Dev Teams).</p>
-        </div>
-
-        <div class="cta-container">
-            <a href="https://www.linkedin.com/in/carmine-d-alise-3b25024b" class="btn" target="_blank">CONNETTITI SU LINKEDIN</a>
-            <p style="margin-top: 15px; font-size: 0.8rem;"><a href="https://github.com/iacreatorcar" style="color: var(--muted);">Esplora i miei repository su GitHub</a></p>
-        </div>
-
-        <footer>
-            © 2025 Carmine D'Alise · Digital Innovation & Leadership
-        </footer>
+<section>
+  <h3>Professional Identity</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Full Stack & AI Developer</h4>
+      <p>End-to-end development of modern web and intelligent systems, from UX to AI agents integration.</p>
+      <div class="badge-container">
+        <span class="badge">HTML/CSS</span> <span class="badge">JavaScript</span> <span class="badge">React</span>
+        <span class="badge">Angular</span> <span class="badge">Node.js</span> <span class="badge">Django</span>
+        <span class="badge">Ruby on Rails</span> <span class="badge">AI Agents</span>
+      </div>
     </div>
+    
+    <div class="card">
+      <h4>Technical Project Manager</h4>
+      <p>Leadership of complex digital projects in mission-critical contexts, bridging business vision and execution.</p>
+      <div class="badge-container">
+        <span class="badge">Agile</span> <span class="badge">Scrum</span> <span class="badge">Waterfall</span>
+        <span class="badge">Stakeholder Management</span> <span class="badge">Risk Management</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Digital & AV Systems Lead</h4>
+      <p>Design and deployment of advanced AV and networking systems for resorts, vessels, and hybrid environments.</p>
+      <div class="badge-container">
+        <span class="badge">Crestron</span> <span class="badge">Samsung MagicInfo</span> <span class="badge">LG Pro Cloud</span>
+        <span class="badge">HPE</span> <span class="badge">Starlink</span> <span class="badge">5G Satellite</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Land & Cruise Recruitment Value</h3>
+  <div class="grid">
+    <div class="card">
+      <ul class="list-check">
+        <li>Adaptable to <strong>travelling & rotational contracts</strong></li>
+        <li>Experience in <strong>multicultural international teams</strong></li>
+        <li>Deep understanding of <strong>maritime technology</strong></li>
+        <li>Operational mindset combined with innovation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <ul class="list-check">
+        <li>Digital transformation for guest experience</li>
+        <li>Automation & AI-driven efficiency</li>
+        <li>Reliable systems in low-connectivity (Sea)</li>
+        <li>Technical lead & management bridge</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Resources</h3>
+  <div class="grid">
+    <div class="card" style="text-align:center">
+      <h4>GitHub</h4>
+      <p>Public repositories and AI experiments.</p>
+      <a class="cta" href="https://github.com/iacreatorcar" target="_blank">Repositories</a>
+    </div>
+    <div class="card" style="text-align:center">
+      <h4>LinkedIn</h4>
+      <p>Professional background and certifications.</p>
+      <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b" target="_blank">Connect</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Carmine D'Alise · Digital Lead · Full Stack · Project Management
+</footer>
+
 </body>
 </html>
