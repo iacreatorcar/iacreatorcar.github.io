@@ -3,179 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carmine D'Alise – Digital Lead | Full Stack Developer | Technical Project Manager</title>
-  <meta name="description" content="Portfolio professionale di Carmine D'Alise – Full Stack Developer, Digital Lead e Technical Project Manager con oltre 20 anni di esperienza internazionale." />
+  <title>Carmine D'Alise – Digital Lead & Technical Operations</title>
   <style>
     :root {
-      --bg: #020617;
-      --card: #0f172a;
-      --primary: #38bdf8;
-      --secondary: #22c55e;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
+      --bg: #0f172a; --card: #111827; --primary: #38bdf8;
+      --secondary: #22c55e; --text: #e5e7eb; --muted: #9ca3af;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: linear-gradient(180deg, #020617, #0f172a);
-      color: var(--text);
-      line-height: 1.6;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text); line-height: 1.5;
     }
-    header {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    header h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -1px; }
-    header h2 { margin-top: 0.5rem; font-size: 1.4rem; color: var(--primary); font-weight: 500; }
-    header p { margin-top: 1.5rem; max-width: 800px; color: var(--muted); font-size: 1.1rem; }
-    
-    section { max-width: 1100px; margin: auto; padding: 3rem 2rem; }
-    h3 { margin-bottom: 1.5rem; color: var(--secondary); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
+    header, section { max-width: 1100px; margin: auto; padding: 2rem; }
+    header { padding-top: 4rem; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.1rem; color: var(--primary); margin-top: 0.5rem; font-weight: 500; }
+    header p { margin-top: 1rem; color: var(--muted); font-size: 0.95rem; }
+    h3 { margin-bottom: 1.5rem; color: var(--secondary); border-bottom: 1px solid #1e293b; padding-bottom: 0.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
     .card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
+      background: rgba(17, 24, 39, 0.6); border-radius: 12px; padding: 1.2rem;
+      border: 1px solid #1e293b; transition: 0.3s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary);
-      box-shadow: 0 15px 40px rgba(56,189,248,0.1);
+    .card:hover { border-color: var(--primary); transform: translateY(-3px); }
+    h4 { margin-bottom: 0.5rem; font-size: 1rem; color: #fff; }
+    .card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem; }
+    .badge { 
+      display: inline-block; margin: 2px; padding: 0.2rem 0.5rem; 
+      font-size: 0.75rem; border-radius: 6px; background: rgba(56,189,248,0.1); color: var(--primary); 
     }
-    .card h4 { font-size: 1.25rem; margin-bottom: 1rem; color: #fff; }
-    .card p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; }
-    
-    .badge-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .badge {
-      background: rgba(56,189,248,0.1);
-      color: var(--primary);
-      padding: 0.4rem 0.8rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 8px;
-      border: 1px solid rgba(56,189,248,0.2);
+    .cta { 
+      display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; 
+      border-radius: 50px; background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+      color: #020617; font-weight: 600; text-decoration: none; font-size: 0.85rem;
     }
-    
-    .list-check { list-style: none; }
-    .list-check li { margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px; }
-    .list-check li::before { content: "✔"; color: var(--secondary); font-weight: bold; }
-
-    .cta {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: #020617;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.2s ease;
-    }
-    .cta:hover { transform: scale(1.05); }
-
-    footer {
-      padding: 4rem 2rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
+    ul { list-style: none; font-size: 0.85rem; }
+    li { margin-bottom: 0.4rem; color: var(--muted); }
+    footer { padding: 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; opacity: 0.7; }
+    .lang-switch { text-align: right; padding: 1rem 2rem; }
+    .lang-switch button { background: #1e293b; color: white; border: none; padding: 0.3rem 0.6rem; cursor: pointer; border-radius: 4px; margin-left: 5px; }
   </style>
 </head>
 <body>
 
+<div class="lang-switch">
+  <button onclick="switchLang('en')">EN</button>
+  <button onclick="switchLang('it')">IT</button>
+</div>
+
 <header>
-  <h1>carmine d'alise</h1>
-  <h2>digital lead · full stack developer · technical project manager</h2>
-  <p>
-    Versatile professional with over <strong>20+ years of international experience</strong> across digital, technical, AI-driven, and travel & tourism environments. Specialized in designing and delivering scalable solutions for <strong>land-based and cruise ship operations</strong>.
+  <h1>Carmine D'Alise</h1>
+  <h2>Digital Lead & Technical Operations Specialist</h2>
+  <p id="header-text">
+    Executive professional with 20+ years of international experience in cruise ships and luxury hospitality. 
+    Specialized in IT operations, digital media, and AI-driven solutions. Currently pursuing a Master in AI & Intelligent Agents.
   </p>
-  <a class="cta" href="https://github.com/iacreatorcar" target="_blank">View GitHub Profile</a>
+  <div style="display: flex; gap: 10px;">
+    <a class="cta" href="https://github.com/iacreatorcar" target="_blank">GitHub</a>
+    <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b/" target="_blank">LinkedIn</a>
+  </div>
 </header>
 
 <section>
-  <h3>Professional Identity</h3>
+  <h3 id="sec-profile">Professional Profile</h3>
   <div class="grid">
     <div class="card">
-      <h4>Full Stack & AI Developer</h4>
-      <p>End-to-end development of modern web and intelligent systems, from UX to AI agents integration.</p>
-      <div class="badge-container">
-        <span class="badge">HTML/CSS</span> <span class="badge">JavaScript</span> <span class="badge">React</span>
-        <span class="badge">Angular</span> <span class="badge">Node.js</span> <span class="badge">Django</span>
-        <span class="badge">Ruby on Rails</span> <span class="badge">AI Agents</span>
-      </div>
+      <h4>Digital Media & Content</h4>
+      <p>Interactive signage and web platforms for guest experience.</p>
+      <div class="badge">CMS</div> <div class="badge">Digital Signage</div> <div class="badge">React</div>
     </div>
-    
     <div class="card">
-      <h4>Technical Project Manager</h4>
-      <p>Leadership of complex digital projects in mission-critical contexts, bridging business vision and execution.</p>
-      <div class="badge-container">
-        <span class="badge">Agile</span> <span class="badge">Scrum</span> <span class="badge">Waterfall</span>
-        <span class="badge">Stakeholder Management</span> <span class="badge">Risk Management</span>
-      </div>
+      <h4>Technical Operations</h4>
+      <p>Operational continuity for AV/IT systems and startups.</p>
+      <div class="badge">AV Systems</div> <div class="badge">Networking</div> <div class="badge">Service Mgmt</div>
     </div>
-
     <div class="card">
-      <h4>Digital & AV Systems Lead</h4>
-      <p>Design and deployment of advanced AV and networking systems for resorts, vessels, and hybrid environments.</p>
-      <div class="badge-container">
-        <span class="badge">Crestron</span> <span class="badge">Samsung MagicInfo</span> <span class="badge">LG Pro Cloud</span>
-        <span class="badge">HPE</span> <span class="badge">Starlink</span> <span class="badge">5G Satellite</span>
-      </div>
+      <h4>Project & AI Lead</h4>
+      <p>Leadership of complex rollouts and AI automation.</p>
+      <div class="badge">Agile</div> <div class="badge">AI Agents</div> <div class="badge">Stakeholders</div>
+    </div>
+    <div class="card">
+      <h4>Full-Stack Dev</h4>
+      <p>Backend architectures and automation workflows.</p>
+      <div class="badge">Node.js</div> <div class="badge">Python</div> <div class="badge">n8n</div> <div class="badge">API</div>
+    </div>
+    <div class="card">
+      <h4>Design & UX</h4>
+      <p>Visual design and user interface prototyping.</p>
+      <div class="badge">Canva</div> <div class="badge">Figma</div> <div class="badge">Adobe</div>
     </div>
   </div>
 </section>
 
 <section>
-  <h3>Land & Cruise Recruitment Value</h3>
+  <h3 id="sec-value">Value Proposition</h3>
   <div class="grid">
     <div class="card">
-      <ul class="list-check">
-        <li>Adaptable to <strong>travelling & rotational contracts</strong></li>
-        <li>Experience in <strong>multicultural international teams</strong></li>
-        <li>Deep understanding of <strong>maritime technology</strong></li>
-        <li>Operational mindset combined with innovation</li>
+      <ul>
+        <li>✔ International rotational contract specialist</li>
+        <li>✔ Deep maritime & hospitality tech expertise</li>
+        <li>✔ Bridge between technical teams and management</li>
       </ul>
     </div>
     <div class="card">
-      <ul class="list-check">
-        <li>Digital transformation for guest experience</li>
-        <li>Automation & AI-driven efficiency</li>
-        <li>Reliable systems in low-connectivity (Sea)</li>
-        <li>Technical lead & management bridge</li>
+      <ul>
+        <li>✔ AI-driven automation for efficiency</li>
+        <li>✔ Resilient systems for low-connectivity</li>
+        <li>✔ Strategic vision with operational hands-on</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section>
-  <h3>Resources</h3>
-  <div class="grid">
-    <div class="card" style="text-align:center">
-      <h4>GitHub</h4>
-      <p>Public repositories and AI experiments.</p>
-      <a class="cta" href="https://github.com/iacreatorcar" target="_blank">Repositories</a>
-    </div>
-    <div class="card" style="text-align:center">
-      <h4>LinkedIn</h4>
-      <p>Professional background and certifications.</p>
-      <a class="cta" href="https://www.linkedin.com/in/carmine-d-alise-3b25024b" target="_blank">Connect</a>
-    </div>
+  <h3>Key Systems</h3>
+  <div class="card" style="width: 100%;">
+    <p style="font-size: 0.8rem;">
+      <strong>Platforms:</strong> Sanity · Liferay · SourceToad · Samsung VXT · LG Pro:Centric · StarDraw AV · Dante AV · Crestron · Control4
+    </p>
   </div>
 </section>
 
 <footer>
-  © 2025 Carmine D'Alise · Digital Lead · Full Stack · Project Management
+  © 2025 Carmine D'Alise · Digital Lead · Digital Media Expert
 </footer>
+
+<script>
+  function switchLang(lang) {
+    const t = {
+      en: {
+        h: "Executive professional with 20+ years of international experience in cruise ships and luxury hospitality. Specialized in IT operations, digital media, and AI-driven solutions.",
+        p: "Professional Profile", v: "Value Proposition"
+      },
+      it: {
+        h: "Professionista con oltre 20 anni di esperienza internazionale in navi da crociera e ospitalità di lusso. Specializzato in operazioni IT, media digitali e soluzioni AI.",
+        p: "Profilo Professionale", v: "Valore per l'azienda"
+      }
+    };
+    document.getElementById('header-text').innerText = t[lang].h;
+    document.getElementById('sec-profile').innerText = t[lang].p;
+    document.getElementById('sec-value').innerText = t[lang].v;
+  }
+</script>
 
 </body>
 </html>
