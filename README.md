@@ -1,4 +1,4 @@
-https://carminedalise.github.io/iacreatorcar.github.io/
+https://iacreatorcar.github.io/
 
 Versatile professional with over 20 years of experience in technical, digital, and travel & tourism sectors. Recently focused on a Master-level specialization in **Artificial Intelligence and emerging technologies**, leveraging operational and management expertise to drive development solutions.
   
@@ -22,7 +22,7 @@ Node.js, Ruby on Rails, Django, iOS/Android development, Visual Studio Code, AI 
 | Resource | Content Type | Link |
 
 |**GitHub Profile** | Overview of all my public repositories and contributions. 
-| https://carminedalise.github.io/iacreatorcar.github.io/ |  
+https://iacreatorcar.github.io/ |  
 
 | **LinkedIn** | Professional profile and summary of 20+ years of experience. | Carmine D'Alise | 
 https://www.linkedin.com/in/carmine-d-alise-3b25024b/ |
