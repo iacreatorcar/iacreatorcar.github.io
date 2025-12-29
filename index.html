@@ -19,13 +19,23 @@
     .lang-switch button:hover { border-color: var(--primary); color: var(--primary); }
 
     header { padding-top: 3rem; text-align: center; }
-   .logo { 
-    width: 160px; 
-    height: 160px; 
-    border-radius: 50%; /* Questa opzione crea la forma circolare */
-    border: 5px solid #000000; /* MODIFICA QUESTA RIGA: 4px è lo spessore, solid è il tipo, #000000 è il NERO */
+ .logo { 
+    width: 160px; /* Imposta la larghezza desiderata */
+    height: 160px; /* Mantieni altezza uguale alla larghezza */
+    border-radius: 50%; /* Rende il contenitore perfettamente circolare */
+    
+    /* Questo rimuove ogni spazio bianco esterno se l'immagine ha bordi trasparenti */
+    background-color: transparent; 
+    
+    /* Assicura che l'immagine riempia il cerchio senza mostrare lo sfondo bianco originale */
     object-fit: cover; 
-    margin-bottom: 1.5rem; 
+    
+    /* Opzionale: se vuoi rinforzare il bordo nero via codice */
+    border: 2px solid #000000; 
+    
+    /* Centratura automatica nel caso servisse */
+    display: block;
+    margin: 0 auto 1.5rem auto; 
 }
     
     h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 0.5rem; }
