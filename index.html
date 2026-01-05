@@ -115,6 +115,14 @@
             <span class="confidential" id="conf3">Dettagli tecnici discutibili in sede di colloquio.</span>
         </div>
 
+        <div class="card" style="border-right: 3px solid var(--accent);">
+            <h4 id="t6">Creative Design & E-commerce Solution</h4>
+            <p id="d6">Dimostrazione di competenze Full-stack che spaziano dal Web Design (WordPress) alla Brand Identity. Expertise in Content Creation (Canva), fotografia professionale e strategie di Digital Marketing focalizzate sull'esperienza utente.</p>
+            <div class="card-links">
+                <a href="https://iacreatorcar.github.io/PetStyle/" target="_blank" class="card-link" id="pet-btn">View PetStyle Project →</a>
+            </div>
+        </div>
+
         <div class="card">
             <h4 id="t3">Visual & Collaboration (Gamma SpA)</h4>
             <p id="d3">Lavoro di terra focalizzato su installazioni HW/SW e registrazione tenant. Pianificazione tecnica, formazione clienti on-site/remote e gestione ticket di assistenza aziendale.</p>
@@ -131,13 +139,13 @@
     <h3 id="sec-tech">Technical Ecosystem</h3>
     <div class="tech-ecosystem-card">
         <div class="tech-category">
-            <strong>Tech:</strong> <span>React | FastAPI | Python | Node.js | n8n | OpenAI & Gemini API | Git | VS Code</span>
+            <strong>Tech:</strong> <span>React | FastAPI | Python | Node.js | n8n | OpenAI & Gemini API | Git | VS Code | WordPress</span>
         </div>
         <div class="tech-category">
-            <strong>Systems:</strong> <span>Star Draw | Crestron | Dante | IPTV Broadcast | Samsung MagicInfo | LG Pro:Centric</span>
+            <strong>Creative & Marketing:</strong> <span>Canva | Professional Photography | Brand Guidelines | Digital Marketing | Adobe Suite</span>
         </div>
         <div class="tech-category">
-            <strong>Infrastructure:</strong> <span>Starlink | Peplink 5G | Satellite Tech | Shipyard Commissioning | Windows & Apple Server | Cloud</span>
+            <strong>Systems & Infrastructure:</strong> <span>Starlink | Peplink 5G | Crestron | Dante | Samsung MagicInfo | Windows/Apple Server</span>
         </div>
     </div>
 </section>
@@ -163,8 +171,11 @@
             d4: "Technical coordination and contract management for shipyards (Genoa & Ancona). Strategic interface between owners and architects.",
             t5: "Full-Stack Dev: Sea-Services 🚢",
             d5: "Development of a Full-stack CMS platform for Cruise Hospitality with integrated AI Concierge. Optimizing operations through automation and AI.",
+            t6: "Creative Design & E-commerce Solution",
+            d6: "Showcasing Full-stack skills ranging from Web Design (WordPress) to Brand Identity. Expertise in Content Creation (Canva), professional photography, and Digital Marketing strategies focused on user experience.",
             liveBtn: "Live Demo →",
             readmeBtn: "Readme & Specs →",
+            petBtn: "View PetStyle Project →",
             conf3: "Technical details available for discussion during interview."
         },
         it: {
@@ -182,8 +193,11 @@
             d4: "Coordinamento tecnico e gestione commesse per cantieri navali (Genova & Ancona). Interfaccia strategica tra armatori e architetti.",
             t5: "Full-Stack Dev: Sea-Services 🚢",
             d5: "Sviluppo di una piattaforma CMS Full-stack dedicata all'Hospitality di bordo con AI Concierge integrato. Ottimizzazione delle operazioni tramite automazione e AI.",
+            t6: "Creative Design & E-commerce Solution",
+            d6: "Dimostrazione di competenze Full-stack che spaziano dal Web Design (WordPress) alla Brand Identity. Expertise in Content Creation (Canva), fotografia professionale e strategie di Digital Marketing focalizzate sull'esperienza utente.",
             liveBtn: "Live Demo →",
             readmeBtn: "Readme & Specs →",
+            petBtn: "Vedi Progetto PetStyle →",
             conf3: "Dettagli tecnici discutibili in sede di colloquio."
         }
     };
@@ -192,13 +206,14 @@
         document.getElementById('subtitle').innerText = t[lang].sub;
         document.getElementById('sec-exp').innerText = t[lang].secExp;
         document.getElementById('sec-tech').innerText = t[lang].secTech;
-        for(let i=1; i<=5; i++) {
+        for(let i=1; i<=6; i++) {
             if(document.getElementById('t'+i)) document.getElementById('t'+i).innerText = t[lang]['t'+i];
             if(document.getElementById('d'+i)) document.getElementById('d'+i).innerText = t[lang]['d'+i];
         }
         if(document.getElementById('conf1')) document.getElementById('conf1').innerText = t[lang].conf1;
         if(document.getElementById('live-btn')) document.getElementById('live-btn').innerText = t[lang].liveBtn;
         if(document.getElementById('readme-btn')) document.getElementById('readme-btn').innerText = t[lang].readmeBtn;
+        if(document.getElementById('pet-btn')) document.getElementById('pet-btn').innerText = t[lang].petBtn;
         if(document.getElementById('conf3')) document.getElementById('conf3').innerText = t[lang].conf3;
     }
 </script>
