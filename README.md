@@ -1,33 +1,31 @@
-# Carmine D'Alise - Versatile Tech Professional
+# Carmine D'Alise
+### **Senior Digital Experience Lead | Strategic Technical Consultant**
 
-Versatile professional with over 20 years of experience in technical, digital, and travel & tourism sectors. Recently focused on a Master-level specialization in **Artificial Intelligence and emerging technologies**, leveraging operational and management expertise to drive development solutions.
+**20+ years of expertise** in driving digital transformation and technical operations within the international cruise and hospitality sectors. Proven track record as a **Department Head** for **Aroya Cruises (Saudi Arabia)**, managing complex digital ecosystems, multi-million dollar brand standards, and high-performance multicultural teams.
 
-### 🛠️ Core Expertise
+---
 
-Skilled in software development, UX/UI design, AV & networking systems, and leading innovative AI-driven projects in international contexts.
+### 🎯 Core Professional Differentiators
+* **Department & People Management:** Lead of the Onboard Digital Experience Department. Expert in coaching, performance appraisals (CDPs), and fostering a "Leadership by Example" culture for teams of 25+ staff.
+* **Digital Guest Journey Specialist:** End-to-end management of Digital Apps, Interactive TV, Starlink Wi-Fi, and public venue screen content. Specialized in aligning technical delivery with brand-specific audience interests (e.g., "Remarkably Arabian" experience).
+* **Revenue & KPI Growth:** Strategic ability to identify underperforming sales areas and implement proactive digital promotions to achieve financial targets and tour minimums.
+* **Technical Troubleshooting & SOPs:** Advanced capacity to resolve mission-critical issues with digital platforms while maintaining strict compliance with safety, environmental, and brand grooming standards.
 
-* **Digital & AV Systems:** Crestron, Samsung Magic Info, LG Pro/Business Cloud kiosk, hotel mode interactive.
-* **Networking:** HPE, Starlink, Peplink 5G satellite.
-* **Automation & Smart Systems:** AI-driven automation and smart integration.
-* **Web Development & AI:** HTML, CSS, JavaScript, React, Angular, Vue.js, AI models and intelligent agents implementation.
-* **Project Management:** Agile, Scrum, Waterfall, innovative project leadership.
-* **Design & UX/UI:** User Experience, Adobe Creative Cloud, AI-friendly interface design.
+### 🛠️ Strategic Tech Stack
+* **Hospitality Tech:** Samsung VXT/MagicInfo, LG Pro:Centric, IPTV, CMS (Get Slash/Sanity), Starlink & Peplink.
+* **Backend & Automation:** Python, FastAPI, MongoDB, JSON Scripting, Nginx, Git/GitHub.
+* **Design & UX:** UX/UI Principles, Adobe Creative Cloud, Canva Pro Strategy, Front-end (React/JS/HTML/CSS).
 
-### 🏗️ Infrastructure & DevOps (New Skills)
+### 📈 Communication & Global Operations
+* **Multicultural Fluency:** Native Italian, Fluent English (C2), Fluent Spanish (C2).
+* **Stakeholder Management:** Seamless collaboration between shoreside management, IT, and Marketing to ensure a cohesive digital experience across all channels.
+* **Data-Driven Decisions:** Expert in analyzing user data and guest feedback to optimize digital engagement and service quality.
 
-* **Containerization:** Designing and managing isolated environments using **Docker**.
-* **Web Serving:** Deployment of web applications via **Nginx** on Alpine Linux architectures.
-* **Cloud Distribution:** Image lifecycle management (Tagging/Pushing) on **Docker Hub**.
+---
 
-### 💻 Technical Proficiency
+### 🔗 Portfolio & Socials
+* **[Live Digital Portfolio](https://iacreatorcar.github.io)** - *Skills Matrix & Projects*
+* **[Visual Strategy (Canva)](https://www.canva.com/design/DAGFNejoyL4/5MlHThgTRUWJmlbR2o-33g/view)** - *UX/UI & Media Showcase*
+* **[LinkedIn Profile](https://www.linkedin.com/in/carmine-d-alise-3b25024b/)** - *Full Career History*
 
-Node.js, Ruby on Rails, Django, iOS/Android development, Visual Studio Code, AI frameworks, and intelligent agent tools.
-
-## 🔗 Portfolio & Resources
-
-| Resource | Content Type | Link |
-| :--- | :--- | :--- |
-| **Live Portfolio** | Direct visual access to my personal website. | [iacreatorcar.github.io](https://iacreatorcar.github.io/) |
-| **Docker Hub** | Containerized images ready for deployment (Nginx-based). | [iacreator/portfolio-web](https://hub.docker.com/r/iacreator/portfolio-web) |
-| **GitHub Profile** | Source code and public contributions. | [github.com/iacreatorcar](https://github.com/iacreatorcar) |
-| **LinkedIn** | Professional profile and 20+ years of career history. | [Carmine D'Alise](https://www.linkedin.com/in/carmine-d-alise-3b25024b/) |
+© 2026 Carmine D'Alise | Senior Digital Lead | GitHub: iacreatorcar
