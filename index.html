@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carmine D'Alise | Senior Digital Experience Lead & Strategic Consultant</title>
-    <meta name="description" content="Portfolio professionale di Carmine D'Alise. Esperto in Digital Experience, Hospitality e Innovazione Tecnologica.">
+    <title>Carmine D'Alise | Senior Digital Experience Lead</title>
+    <meta name="description" content="Portfolio di Carmine D'Alise - Senior Digital Experience Lead & Strategic Consultant. Specializzato in Hospitality e Innovazione Digitale.">
     
-    <!-- Open Graph / Facebook / LinkedIn -->
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Carmine D'Alise | Portfolio">
+    <meta property="og:description" content="Digital Experience Lead & Strategic Consultant. Scopri i miei progetti nell'ambito Hospitality e Tech.">
+    <meta property="og:image" content="assets/logo.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Carmine D'Alise | Senior Digital Experience Lead">
-    <meta property="og:description" content="Trasformo l'esperienza globale in soluzioni digitali concrete per l'hospitality e l'innovazione.">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +21,28 @@
         .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .card-hover:hover { transform: translateY(-8px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 20px 40px -20px rgba(56, 189, 248, 0.3); }
-        .text-gradient { background: linear-gradient(to right, #38bdf8, #22c55e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
 <body class="bg-[#020617] text-slate-200 antialiased selection:bg-sky-500/30 selection:text-sky-200">
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
+
