@@ -9,13 +9,15 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #020617; color: #e2e8f0; scroll-behavior: smooth; }
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.4); }
-        .card-project { background: #0f172a; border: 1px solid #1e293b; transition: all 0.3s ease; border-radius: 1.5rem; display: flex; flex-direction: column; padding: 2rem; }
+        .card-project { background: #0f172a; border: 1px solid #1e293b; transition: all 0.3s ease; border-radius: 1.5rem; display: flex; flex-direction: column; padding: 1.5rem; height: 100%; }
         .card-project:hover { transform: translateY(-5px); border-color: #38bdf8; }
-        .btn-primary { background: #38bdf8; color: #020617; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 800; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s; }
-        .btn-outline { border: 1px solid #334155; color: #94a3b8; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: 800; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s; }
+        .card-featured { background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%); border: 1px solid #334155; }
+        .btn-primary { background: #38bdf8; color: #020617; padding: 0.5rem 0.8rem; border-radius: 0.5rem; font-weight: 800; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s; }
+        .btn-outline { border: 1px solid #334155; color: #94a3b8; padding: 0.5rem 0.8rem; border-radius: 0.5rem; font-weight: 800; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s; }
         .border-sky { border-top: 4px solid #38bdf8; }
         .border-green { border-top: 4px solid #22c55e; }
         .border-orange { border-top: 4px solid #f97316; }
+        .border-purple { border-top: 4px solid #a855f7; }
     </style>
 </head>
 <body class="antialiased">
@@ -31,26 +33,31 @@
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto pt-32 pb-12 text-center px-6">
-        <img src="assets/logo.jpg" class="w-24 h-24 mx-auto rounded-full mb-6 border-2 border-sky-400 p-1" onerror="this.src='https://ui-avatars.com/api/?name=Carmine+Dalise&background=020617&color=38bdf8&size=150'">
-        <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-3 uppercase italic text-white">Carmine <span class="text-sky-400">D'Alise</span></h1>
-        <p id="subtitle" class="text-sm md:text-base font-medium text-slate-400 tracking-[0.2em] uppercase"></p>
+    <header class="max-w-4xl mx-auto pt-32 pb-8 text-center px-6">
+        <img src="assets/logo.jpg" class="w-20 h-20 mx-auto rounded-full mb-6 border-2 border-sky-400 p-1" onerror="this.src='https://ui-avatars.com/api/?name=Carmine+Dalise&background=020617&color=38bdf8&size=150'">
+        <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-2 uppercase italic text-white">Carmine <span class="text-sky-400">D'Alise</span></h1>
+        <p id="subtitle" class="text-xs md:text-sm font-medium text-slate-400 tracking-[0.2em] uppercase"></p>
     </header>
 
-    <section class="max-w-3xl mx-auto px-6 mb-24">
-        <div class="glass rounded-3xl p-8 text-center">
-            <h3 id="mission-title" class="text-sky-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4"></h3>
-            <p id="mission-text" class="text-lg md:text-xl font-semibold italic text-slate-200 leading-relaxed"></p>
+    <section class="max-w-3xl mx-auto px-6 mb-16">
+        <div class="glass rounded-3xl p-6 text-center">
+            <h3 id="mission-title" class="text-sky-400 text-[9px] font-black uppercase tracking-[0.3em] mb-3"></h3>
+            <p id="mission-text" class="text-base md:text-lg font-semibold italic text-slate-200 leading-relaxed"></p>
         </div>
     </section>
 
+    <section class="max-w-7xl mx-auto px-6 mb-16">
+        <h2 id="sec-featured" class="text-lg font-black uppercase italic mb-8 border-l-4 border-sky-400 pl-4"></h2>
+        <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </section>
+
     <section class="max-w-7xl mx-auto px-6 mb-24">
-        <h2 id="sec-projects" class="text-xl font-black uppercase italic mb-10 border-b border-slate-800 pb-4"></h2>
-        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <h2 id="sec-others" class="text-lg font-black uppercase italic mb-8 border-l-4 border-slate-700 pl-4 text-slate-500"></h2>
+        <div id="others-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
     <footer class="py-12 text-center border-t border-slate-900">
-        <p id="footer-text" class="text-slate-600 text-[10px] font-bold tracking-widest uppercase"></p>
+        <p id="footer-text" class="text-slate-600 text-[9px] font-bold tracking-widest uppercase"></p>
     </footer>
 
     <script>
@@ -58,42 +65,61 @@
             it: {
                 subtitle: "Senior Digital Experience Lead | Strategic Consultant",
                 missionTitle: "Mission & Vision",
-                missionText: "\"Dopo anni di operatività a bordo come Field Technician, Multimedia e Digital Lead, la passione per le nuove tecnologie mi porta a sviluppare ciò che ho appreso nel tempo e ad aggiornarmi costantemente.\"",
-                secProjects: "Progetti Strategici & Showcase",
+                missionText: "\"Dopo anni di operatività a bordo come Field Technician, Multimedia e Digital Lead, la passione per le nuove tecnologie mi porta a sviluppare ciò che ho appreso nel tempo e ad aggiornarmi costantemente con sistemi Open Source e Hospitality Mode.\"",
+                secFeatured: "Strategic Hospitality Systems (Core Expertise)",
+                secOthers: "Technical Showcases & Labs",
                 footer: "© 2026 Carmine D'Alise | Professional Portfolio",
                 creds: "* Credenziali demo su richiesta: iacreatorcar@gmail.com"
             },
             en: {
                 subtitle: "Senior Digital Experience Lead | Strategic Consultant",
                 missionTitle: "Mission & Vision",
-                missionText: "\"After years of field operations as a Field Technician, Multimedia, and Digital Lead, my passion for new technologies drives me to develop what I have learned over time and constantly update myself.\"",
-                secProjects: "Strategic Projects & Showcase",
+                missionText: "\"After years of onboard operations as a Field Technician, Multimedia, and Digital Lead, my passion for new technologies drives me to develop what I have learned over time, focusing on Open Source and Hospitality Mode systems.\"",
+                secFeatured: "Strategic Hospitality Systems (Core Expertise)",
+                secOthers: "Technical Showcases & Labs",
                 footer: "© 2026 Carmine D'Alise | Professional Portfolio",
                 creds: "* Demo credentials upon request: iacreatorcar@gmail.com"
             }
         };
 
-        const projects = [
-            { id: 'hflow', border: 'border-sky', title: 'HOTELFLOW MANAGER 🏨', desc: { it: 'Suite gestionale ad alte prestazioni per l\'hospitality moderna.', en: 'High-performance management suite for modern hospitality.' }, links: [{txt: 'LIVE DEMO VERCEL →', main: true, url: 'https://hotelflow-manager.vercel.app'}, {txt: 'GITHUB DOCS', main: false, url: 'https://iacreatorcar.github.io/hotelflow-manager/'}] },
-            { id: 'cms', border: 'border-sky', title: 'CRUISE HOSPITALITY CMS 🚢', desc: { it: 'Piattaforma CMS per hospitality marittima. Tech: React 19, FastAPI, MongoDB.', en: 'Maritime hospitality CMS platform. React 19, FastAPI, MongoDB.' }, links: [{txt: 'LIVE PROJECT →', main: false, url: 'https://sea-services.emergent.host'}, {txt: 'GITHUB DEMO', main: false, url: 'https://iacreatorcar.github.io/cruise-hospitality-cms/'}] },
-            { id: 'cert', border: 'border-orange', title: 'CERTIFICAZIONI & PORTFOLIO 🎖️', desc: { it: 'Showcase multimediale delle certificazioni e dei progetti realizzati on-board.', en: 'Multimedia showcase of certifications and shipboard projects.' }, links: [{txt: 'VIEW PORTFOLIO →', main: true, url: 'https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view'}] },
-            { id: 'menu', border: 'border-sky', title: 'SMART SHIP MENU SYSTEM ⚓', desc: { it: 'Prototipo di menu digitale per operazioni di flotta. UX efficiente.', en: 'Digital menu prototype for fleet operations. Efficient UX.' }, creds: true, links: [{txt: 'LIVE DEMO', main: false, url: 'https://smart-menu-qr.vercel.app'}] },
-            { id: 'kiwi', border: 'border-green', title: 'KIWI AUTOMATION PROJECT 🥝', desc: { it: 'Ambiente di QA automation professionale. Mobile-first via Docker.', en: 'Professional QA automation environment. Mobile-first via Docker.' }, links: [{txt: 'LIVE QA DEMO', main: false, url: 'https://iacreatorcar.github.io/Kiwi-Automation-Project/'}] },
+        const featuredProjects = [
+            { id: 'hflow', border: 'border-sky', title: 'HOTELFLOW MANAGER 🏨', desc: { it: 'Suite gestionale ad alte prestazioni per l\'hospitality moderna. Integrazione completa flussi operativi.', en: 'High-performance management suite for modern hospitality. Full operational workflow integration.' }, links: [{txt: 'LIVE DEMO →', main: true, url: 'https://hotelflow-manager.vercel.app'}, {txt: 'GITHUB', main: false, url: 'https://iacreatorcar.github.io/hotelflow-manager/'}] },
+            { id: 'cms', border: 'border-sky', title: 'CRUISE HOSPITALITY CMS 🚢', desc: { it: 'Piattaforma CMS per hospitality marittima. Gestione contenuti complessi su scala globale.', en: 'Maritime hospitality CMS platform. Complex content management on a global scale.' }, links: [{txt: 'LIVE PROJECT →', main: true, url: 'https://sea-services.emergent.host'}, {txt: 'GITHUB', main: false, url: 'https://iacreatorcar.github.io/cruise-hospitality-cms/'}] },
+            { id: 'menu', border: 'border-sky', title: 'SMART SHIP MENU SYSTEM ⚓', desc: { it: 'Prototipo di menu digitale per operazioni di flotta. Ottimizzazione UX per ambienti marittimi.', en: 'Digital menu prototype for fleet operations. UX optimized for maritime environments.' }, creds: true, links: [{txt: 'LIVE DEMO →', main: true, url: 'https://smart-menu-qr.vercel.app'}] }
+        ];
+
+        const otherProjects = [
+            { id: 'jira', border: 'border-green', title: 'JIRA TICKETING WORKFLOW 🛠️', desc: { it: 'Gestione ticket e workflow tecnici. Deploy Vercel, Docker-ready.', en: 'Technical ticketing and workflow management. Deployed on Vercel, Docker-ready.' }, links: [{txt: 'LIVE VERCEL', main: true, url: 'https://mini-jira-demo.vercel.app'}, {txt: 'DOCKER', main: false, url: 'https://github.com/iacreatorcar/mini-jira-demo'}] },
+            { id: 'cms-quiz', border: 'border-purple', title: 'CMS THEORY QUIZ 🧠', desc: { it: 'App interattiva per valutare competenze su CMS e strategia digitale.', en: 'Interactive app to assess knowledge on CMS and digital strategy.' }, links: [{txt: 'START QUIZ →', main: true, url: 'https://iacreatorcar.github.io/cms-quiz/'}] },
+            { id: 'cert', border: 'border-orange', title: 'CERTIFICAZIONI & MEDIA 🎖️', desc: { it: 'Showcase multimediale delle certificazioni e dei progetti on-board.', en: 'Multimedia showcase of certifications and shipboard projects.' }, links: [{txt: 'VIEW ALL →', main: true, url: 'https://www.canva.com/design/DAGFNejoyL4/MHkiG61sTBJYGzgKQS8NKQ/view'}] },
+            { id: 'kiwi', border: 'border-green', title: 'KIWI QA AUTOMATION 🥝', desc: { it: 'Ambiente di QA automation professionale mobile-first.', en: 'Professional mobile-first QA automation environment.' }, links: [{txt: 'VIEW LAB', main: false, url: 'https://iacreatorcar.github.io/Kiwi-Automation-Project/'}] },
             { id: 'pet', border: 'border-orange', title: 'PETSTYLE ECOMMERCE 🐾', desc: { it: 'Prototipo e-commerce D2C per il settore pet.', en: 'D2C e-commerce prototype for the pet industry.' }, links: [{txt: 'VIEW DEMO', main: false, url: 'https://iacreatorcar.github.io/PetStyle/'}] }
         ];
+
+        function createCard(p, lang) {
+            const linksHtml = p.links.map(l => `<a href="${l.url}" target="_blank" class="${l.main ? 'btn-primary' : 'btn-outline'}">${l.txt}</a>`).join('');
+            return `<div class="card-project ${p.border} ${p.id === 'hflow' || p.id === 'cms' || p.id === 'menu' ? 'card-featured' : ''}">
+                <h4 class="text-white font-black text-[12px] mb-3 italic uppercase">${p.title}</h4>
+                <p class="text-slate-400 text-[10px] leading-relaxed mb-6 flex-grow">${p.desc[lang]}</p>
+                ${p.creds ? `<div class="bg-orange-500/10 border border-orange-500/20 rounded-lg p-2 mb-4 text-[8px] text-orange-400 font-bold text-center uppercase">${content[lang].creds}</div>` : ''}
+                <div class="flex flex-wrap gap-2">${linksHtml}</div>
+            </div>`;
+        }
 
         function changeLang(lang) {
             document.getElementById('subtitle').innerText = content[lang].subtitle;
             document.getElementById('mission-title').innerText = content[lang].missionTitle;
             document.getElementById('mission-text').innerText = content[lang].missionText;
-            document.getElementById('sec-projects').innerText = content[lang].secProjects;
+            document.getElementById('sec-featured').innerText = content[lang].secFeatured;
+            document.getElementById('sec-others').innerText = content[lang].secOthers;
             document.getElementById('footer-text').innerText = content[lang].footer;
-            const grid = document.getElementById('projects-grid');
-            grid.innerHTML = '';
-            projects.forEach(p => {
-                const linksHtml = p.links.map(l => `<a href="${l.url}" target="_blank" class="${l.main ? 'btn-primary' : 'btn-outline'}">${l.txt}</a>`).join('');
-                grid.innerHTML += `<div class="card-project ${p.border}"><h4 class="text-white font-black text-[13px] mb-3 italic uppercase">${p.title}</h4><p class="text-slate-400 text-[11px] leading-relaxed mb-6 flex-grow">${p.desc[lang]}</p>${p.creds ? `<div class="bg-orange-500/10 border border-orange-500/20 rounded-lg p-2 mb-4 text-[9px] text-orange-400 font-bold text-center uppercase">${content[lang].creds}</div>` : ''}<div class="flex flex-wrap gap-2">${linksHtml}</div></div>`;
-            });
+            
+            document.getElementById('featured-grid').innerHTML = featuredProjects.map(p => createCard(p, lang)).join('');
+            document.getElementById('others-grid').innerHTML = otherProjects.map(p => createCard(p, lang)).join('');
+            
+            // Toggle active button style
+            document.getElementById('btn-it').className = lang === 'it' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
+            document.getElementById('btn-en').className = lang === 'en' ? 'px-3 py-1 text-[10px] font-black rounded border border-sky-400 text-sky-400' : 'px-3 py-1 text-[10px] font-black rounded border border-slate-700 text-slate-500';
         }
         changeLang('it');
     </script>
